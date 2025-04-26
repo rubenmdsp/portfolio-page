@@ -69,3 +69,38 @@ nav ul li a {
 html {
   scroll-behavior: smooth;
 }
+
+.skill {
+  margin-bottom: 20px;
+}
+
+.skill-bar {
+  background-color: #ddd;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  width: 0; /* Startbreite */
+  background-color: #007bff;
+  border-radius: 10px;
+}
+
+/* individuelle Breiten */
+.html {
+  width: 50%; /* 50% gelernt */
+}
+
+.css {
+  width: 40%; /* 40% gelernt */
+}
+
+.python {
+  width: 30%;
+}
+
+.git {
+  width: 60%;
+}
