@@ -57,5 +57,21 @@
     <p>© 2025 Ruben Pereira</p>
   </footer>
 <button onclick="scrollToTop()" id="topBtn" style="display:none;position:fixed;bottom:40px;right:40px;padding:10px 20px;">↑ Nach oben</button>
+  <script>
+  // Zeige den Button nur beim Scrollen
+  window.onscroll = function() {
+    const btn = document.getElementById("topBtn");
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  };
+
+  // Funktion, die die Seite nach oben scrollt
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
 </body>
 </html>
