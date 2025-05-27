@@ -292,3 +292,59 @@ footer {
   text-decoration: underline;
 }
 
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.skill-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.skill-card img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.skill-card p {
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+.skill-bar {
+  background-color: #ddd;
+  height: 10px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  width: 0;
+  transition: width 1.2s ease;
+  border-radius: 20px;
+}
+
+/* TECH */
+.html        { width: 30%; background-color: #e44d26; }
+.css         { width: 20%; background-color: #264de4; }
+.python      { width: 20%; background-color: #3572A5; }
+.git         { width: 40%; background-color: #f1502f; }
+
+/* FUN */
+.fussball    { width: 90%; background-color: #28a745; }
+.gaming      { width: 95%; background-color: #6f42c1; }
+.nerd        { width: 100%; background-color: #343a40; }
+.selbstironie { width: 100%; background-color: #fd7e14; }
+.googlen     { width: 95%; background-color: #0dcaf0; }
+.motivation  { width: 35%; background-color: #ffc107; }
+.lastminute  { width: 95%; background-color: #dc3545; }
+
+
