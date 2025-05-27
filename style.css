@@ -201,3 +201,29 @@ footer {
   text-align: center;
   background-color: #f8f9fa; /* Optional für Kontrast */
 }
+
+.project-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  object-fit: cover;
+  max-height: 200px;
+}
+
+.project-tags {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 10px 0;
+}
+
+.project-tags li {
+  background-color: #007bff;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
