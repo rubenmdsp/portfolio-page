@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mein Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -20,104 +21,113 @@
       </ul>
     </nav>
   </header>
-<section id="hero">
+
+  <section id="hero" data-aos="fade-up">
     <div class="hero-content">
       <h1>Willkommen auf meiner Portfolioseite</h1>
       <p>Ich bin Student an der FH und lerne Webentwicklung.</p>
       <a href="#projects" class="hero-button">Meine Projekte ansehen</a>
     </div>
   </section>
+
   <main>
-    <section id="about">
+
+    <section id="about" data-aos="fade-up">
       <h2>Über mich</h2>
       <p>Ich studiere aktuell Wirtschaftsinformatik an der Berner Fachhochschule. Meine Interessen liegen in modernen Technologien und Design. In meiner Freizeit bin ich im Winter ein klassischer "Nerd" und leidenschaftlicher Gamer. Im Sommer gerne draussen das schöne Wetter am geniessen!</p>
     </section>
 
-<section id="projects">
-  <h2>Projekte</h2>
+    <section id="projects" data-aos="fade-up">
+      <h2>Projekte</h2>
 
-  <div class="projects-grid">
+      <div class="projects-grid">
 
-    <div class="project-card">
-      <h3>Portfolio-Website</h3>
-      <p>Meine eigene Portfolio-Seite mit HTML, CSS und ein bisschen JavaScript. Veröffentlicht auf GitHub Pages.</p>
-      <a href="https://rubenmdsp.github.io/portfolio-page" target="_blank">Projekt ansehen</a>
-    </div>
+        <div class="project-card" data-aos="zoom-in">
+          <h3>Portfolio-Website</h3>
+          <p>Meine eigene Portfolio-Seite mit HTML, CSS und ein bisschen JavaScript. Veröffentlicht auf GitHub Pages.</p>
+          <a href="https://rubenmdsp.github.io/portfolio-page" target="_blank">Projekt ansehen</a>
+        </div>
 
-    <div class="project-card">
-      <h3>To-Do-Listen-App (Übungsprojekt)</h3>
-      <p>Ein einfaches JavaScript-Projekt zum Verwalten von Aufgaben. Erste Erfahrungen mit DOM-Manipulation gesammelt.</p>
-      <a href="https://github.com/rubenmdsp/todo-app" target="_blank">Code auf GitHub</a>
-    </div>
+        <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+          <h3>To-Do-Listen-App (Übungsprojekt)</h3>
+          <p>Ein einfaches JavaScript-Projekt zum Verwalten von Aufgaben. Erste Erfahrungen mit DOM-Manipulation gesammelt.</p>
+          <a href="https://github.com/rubenmdsp/todo-app" target="_blank">Code auf GitHub</a>
+        </div>
 
-    <div class="project-card">
-      <h3>Python-Konsolenprojekt</h3>
-      <p>Ein kleiner Taschenrechner in Python. Erstes Übungsprojekt für Variablen, Schleifen und Funktionen.</p>
-      <a href="https://github.com/rubenmdsp/python-rechner" target="_blank">Code auf GitHub</a>
-    </div>
+        <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+          <h3>Python-Konsolenprojekt</h3>
+          <p>Ein kleiner Taschenrechner in Python. Erstes Übungsprojekt für Variablen, Schleifen und Funktionen.</p>
+          <a href="https://github.com/rubenmdsp/python-rechner" target="_blank">Code auf GitHub</a>
+        </div>
 
-  </div>
+      </div>
+    </section>
 
-</section>
+    <section id="skills" data-aos="fade-up">
+      <h2>Skills</h2>
 
-    <section id="skills">
-  <h2>Skills</h2>
+      <div class="skill">
+        <p>HTML (Basics)</p>
+        <div class="skill-bar">
+          <div class="skill-fill html"></div>
+        </div>
+      </div>
 
-  <div class="skill">
-    <p>HTML (Basics)</p>
-    <div class="skill-bar">
-      <div class="skill-fill html"></div>
-    </div>
-  </div>
+      <div class="skill">
+        <p>CSS (Basics)</p>
+        <div class="skill-bar">
+          <div class="skill-fill css"></div>
+        </div>
+      </div>
 
-  <div class="skill">
-    <p>CSS (Basics)</p>
-    <div class="skill-bar">
-      <div class="skill-fill css"></div>
-    </div>
-  </div>
+      <div class="skill">
+        <p>Python (erste Erfahrungen)</p>
+        <div class="skill-bar">
+          <div class="skill-fill python"></div>
+        </div>
+      </div>
 
-  <div class="skill">
-    <p>Python (erste Erfahrungen)</p>
-    <div class="skill-bar">
-      <div class="skill-fill python"></div>
-    </div>
-  </div>
+      <div class="skill">
+        <p>Git & GitHub (Versionierung)</p>
+        <div class="skill-bar">
+          <div class="skill-fill git"></div>
+        </div>
+      </div>
 
-  <div class="skill">
-    <p>Git & GitHub (Versionierung)</p>
-    <div class="skill-bar">
-      <div class="skill-fill git"></div>
-    </div>
-  </div>
+    </section>
 
-</section>
-
-    <section id="contact">
+    <section id="contact" data-aos="fade-up">
       <h2>Kontakt</h2>
       <p>Kontaktieren Sie mich via GitHub oder per E-Mail (rubenmdsp@gmail.com).</p>
     </section>
+
   </main>
 
   <footer>
     <p>© 2025 Ruben Pereira</p>
   </footer>
-<button onclick="scrollToTop()" id="topBtn" style="display:none;position:fixed;bottom:40px;right:40px;padding:10px 20px;">↑ Nach oben</button>
-  <script>
-  // Zeige den Button nur beim Scrollen
-  window.onscroll = function() {
-    const btn = document.getElementById("topBtn");
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-      btn.style.display = "block";
-    } else {
-      btn.style.display = "none";
-    }
-  };
 
-  // Funktion, die die Seite nach oben scrollt
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-</script>
+  <button onclick="scrollToTop()" id="topBtn" style="display:none;position:fixed;bottom:40px;right:40px;padding:10px 20px;">↑ Nach oben</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    // Zeige den Button nur beim Scrollen
+    window.onscroll = function () {
+      const btn = document.getElementById("topBtn");
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    };
+
+    // Funktion, die die Seite nach oben scrollt
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+
 </body>
 </html>
