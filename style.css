@@ -1,11 +1,14 @@
-/* Reset */
-body {
-  margin: 0;
-  overflow-x: hidden;
-  font-family: sans-serif;
+/* Global Reset & Box-Sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-html {
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -20,13 +23,11 @@ html {
   justify-content: center;
   text-align: center;
   color: white;
-  padding: 0 20px;
-  padding-top: 100px;
+  padding: 100px 20px 0 20px; /* oben Platz für Navbar, links/rechts Abstand */
 }
 
 .hero-content {
   max-width: 100%;
-  box-sizing: border-box;
 }
 
 .hero-content h1 {
@@ -57,6 +58,16 @@ html {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Section Padding allgemein */
+section {
+  padding: 60px 20px;
+}
+
+/* Kontakt: Extra Platz unten */
+#contact {
+  padding-bottom: 120px;
+}
+
 /* Navigation */
 .navbar {
   display: flex;
@@ -68,7 +79,6 @@ html {
   top: 0;
   width: 100%;
   z-index: 1000;
-  box-sizing: border-box;
 }
 
 .logo {
