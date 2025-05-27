@@ -1,15 +1,32 @@
+/* Reset */
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hero Section */
 #hero {
   background-image: url('https://images.unsplash.com/photo-1522199710521-72d69614c702?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
   background-size: cover;
   background-position: center;
-  height: 90vh; /* fast voller Bildschirm */
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
   padding: 0 20px;
-  padding-top: 100px; /* Platz für die fixe Navigation */
+  padding-top: 100px;
+}
+
+.hero-content {
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .hero-content h1 {
@@ -28,22 +45,83 @@
   padding: 12px 24px;
   text-decoration: none;
   font-size: 1.2rem;
-  border-radius: 30px; /* Runde Kanten */
+  border-radius: 30px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* leichter Schatten */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: inline-block;
 }
 
 .hero-button:hover {
   background-color: #0056b3;
-  transform: translateY(-2px); /* kleiner Aufwärtseffekt */
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* stärkerer Schatten beim Hover */
+  transform: translateY(-2px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-html {
-  scroll-behavior: smooth;
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box;
 }
 
+.logo {
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.95);
+    display: none;
+    padding: 1rem 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Skills */
 .skill {
   margin-bottom: 20px;
 }
@@ -57,28 +135,16 @@ html {
 
 .skill-fill {
   height: 100%;
-  width: 0; /* Startbreite */
   background-color: #007bff;
   border-radius: 10px;
 }
 
-/* individuelle Breiten */
-.html {
-  width: 30%; /* 30% Fortschritt */
-}
+.html { width: 30%; }
+.css { width: 20%; }
+.python { width: 20%; }
+.git { width: 40%; }
 
-.css {
-  width: 20%; /* 20% Fortschritt */
-}
-
-.python {
-  width: 20%;
-}
-
-.git {
-  width: 40%;
-}
-
+/* Projekte */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -118,69 +184,4 @@ html {
 
 .project-card a:hover {
   text-decoration: underline;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: rgba(0, 0, 0, 0.6);
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-}
-
-.logo {
-  color: white;
-  font-weight: bold;
-  font-size: 1.5rem;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 1.5rem;
-}
-
-.nav-links li a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.1rem;
-}
-
-/* Hamburger */
-.hamburger {
-  display: none;
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-  .nav-links {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.95);
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    display: none;
-    padding: 1rem 0;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: block;
-  }
-}
-
-body {
-  overflow-x: hidden; /* Verhindert horizontales Scrollen */
 }
