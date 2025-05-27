@@ -7,22 +7,21 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
-
 <body>
 
-<header>
-  <nav class="navbar">
-    <div class="logo">Ruben</div>
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#hero" onclick="closeMenu()">Start</a></li>
-      <li><a href="#about" onclick="closeMenu()">Über mich</a></li>
-      <li><a href="#projects" onclick="closeMenu()">Projekte</a></li>
-      <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
-      <li><a href="#contact" onclick="closeMenu()">Kontakt</a></li>
-    </ul>
-  </nav>
-</header>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Ruben</div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#hero" onclick="closeMenu()">Start</a></li>
+        <li><a href="#about" onclick="closeMenu()">Über mich</a></li>
+        <li><a href="#projects" onclick="closeMenu()">Projekte</a></li>
+        <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
+        <li><a href="#contact" onclick="closeMenu()">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <section id="hero" data-aos="fade-up">
     <div class="hero-content">
@@ -33,7 +32,6 @@
   </section>
 
   <main>
-
     <section id="about" data-aos="fade-up">
       <h2>Über mich</h2>
       <p>Ich studiere aktuell Wirtschaftsinformatik an der Berner Fachhochschule. Meine Interessen liegen in modernen Technologien und Design. In meiner Freizeit bin ich im Winter ein klassischer "Nerd" und leidenschaftlicher Gamer. Im Sommer gerne draussen das schöne Wetter am geniessen!</p>
@@ -43,7 +41,6 @@
       <h2>Projekte</h2>
 
       <div class="projects-grid">
-
         <div class="project-card" data-aos="zoom-in">
           <h3>Portfolio-Website</h3>
           <p>Meine eigene Portfolio-Seite mit HTML, CSS und ein bisschen JavaScript. Veröffentlicht auf GitHub Pages.</p>
@@ -61,7 +58,6 @@
           <p>Ein kleiner Taschenrechner in Python. Erstes Übungsprojekt für Variablen, Schleifen und Funktionen.</p>
           <a href="https://github.com/rubenmdsp/python-rechner" target="_blank">Code auf GitHub</a>
         </div>
-
       </div>
     </section>
 
@@ -95,14 +91,12 @@
           <div class="skill-fill git"></div>
         </div>
       </div>
-
     </section>
 
     <section id="contact" data-aos="fade-up">
       <h2>Kontakt</h2>
-      <p>Kontaktieren Sie mich via GitHub oder per E-Mail (rubenmdsp@gmail.com).</p>
+      <p>Kontaktieren Sie mich via GitHub oder per E-Mail: <a href="mailto:rubenmdsp@gmail.com">rubenmdsp@gmail.com</a></p>
     </section>
-
   </main>
 
   <footer>
@@ -115,7 +109,7 @@
   <script>
     AOS.init();
 
-    // Zeige den Button nur beim Scrollen
+    // Scroll-to-Top Button
     window.onscroll = function () {
       const btn = document.getElementById("topBtn");
       if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
@@ -125,19 +119,18 @@
       }
     };
 
-    // Funktion, die die Seite nach oben scrollt
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-  </script>
-<script>
-  function toggleMenu() {
-    document.getElementById("nav-links").classList.toggle("active");
-  }
 
-  function closeMenu() {
-    document.getElementById("nav-links").classList.remove("active");
-  }
-</script>
+    function toggleMenu() {
+      document.getElementById("nav-links").classList.toggle("active");
+    }
+
+    function closeMenu() {
+      document.getElementById("nav-links").classList.remove("active");
+    }
+  </script>
+
 </body>
 </html>
