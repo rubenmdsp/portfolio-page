@@ -227,6 +227,27 @@
       document.getElementById("nav-links").classList.remove("active");
     }
   </script>
+<script>
+  // Funktion: prüft, ob ein Element im Viewport ist
+  function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return rect.top <= window.innerHeight && rect.bottom >= 0;
+  }
 
+  // Funktion: animiert alle Balken
+  function animateSkills() {
+    document.querySelectorAll('.skill-fill').forEach(fill => {
+      const width = fill.getAttribute('data-width');
+      if (isInViewport(fill) && !fill.classList.contains('animated')) {
+        fill.style.width = width;
+        fill.classList.add('animated');
+      }
+    });
+  }
+
+  // Starte bei Scroll & einmal beim Laden
+  window.addEventListener('scroll', animateSkills);
+  window.addEventListener('load', animateSkills);
+</script>
 </body>
 </html>
